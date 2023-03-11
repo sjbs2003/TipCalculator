@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Tip"
+        android:hint="Cost of service"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:minWidth="150dp"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/Service_Questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tip"
+        android:text="How was the service gentlemen!"/>
+
+    <RadioGroup
+        android:id="@+id/Tip_options"
+        android:orientation="vertical"
+        android:checkedButton="@id/Option_7percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Service_Questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/Option_10percent"
+            android:text="Perfect (10%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/Option_7percent"
+            android:text="Perfect (7%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/Option_5percent"
+            android:text="Perfect (5%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/Round_tip"
+        android:checked="true"
+        app:layout_constraintTop_toBottomOf="@id/Tip_options"
+        app:layout_constraintStart_toStartOf="@id/Tip_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Round up tip ?"
+        android:minWidth="150dp"
+        android:minHeight="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/Calculate_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Round_tip"
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/Tip_result"
+        android:text="Tip amount"
+        app:layout_constraintTop_toBottomOf="@id/Calculate_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
